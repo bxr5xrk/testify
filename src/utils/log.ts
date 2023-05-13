@@ -4,10 +4,13 @@ const COLORS = {
   RESET: '\x1b[0m',
 } as const;
 
-export const log = (status: 'success' | 'error', message: string) =>
+export const log = (
+  status: 'success' | 'error',
+  ...message: (string | number | unknown)[]
+) =>
   console.log(
     (status === 'success'
       ? COLORS.GREEN + '[SUCCESS]:'
       : COLORS.RED + '[ERROR]:') + COLORS.RESET,
-    message.toUpperCase()
+    message.join(' ').toUpperCase()
   );
