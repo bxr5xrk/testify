@@ -1,7 +1,11 @@
 # PARSE RESULTS FROM test.if.ua
 
-- Run
+### Run
 
 ```shell
 yarn start 'COOKIE_HERE'
 ```
+
+### Result
+
+/docx/[ID].docx
